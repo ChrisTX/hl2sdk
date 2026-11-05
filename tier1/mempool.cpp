@@ -12,7 +12,6 @@
 #include "tier0/dbg.h"
 #include <ctype.h>
 #include "vstdlib/strtools.h"
-#include "minmax.h" // MAX()
 
 // Should be last include
 #include "tier0/memdbgon.h"

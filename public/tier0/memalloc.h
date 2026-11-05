@@ -18,6 +18,7 @@
 
 #include <stddef.h>
 #include "tier0/mem.h"
+#include "tier0/commonmacros.h"
 
 struct _CrtMemState;
 
