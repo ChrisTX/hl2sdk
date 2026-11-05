@@ -39,6 +39,7 @@ public:
 	void PrintContents();
 
 	void *GetBase();
+	const void *GetBase() const {  return const_cast<CMemoryStack *>(this)->GetBase(); }
 
 private:
 	unsigned char *m_pNextAlloc;
@@ -93,7 +94,7 @@ public:
 
 	// Gets the base address
 	T* Base()												{ return (T*)m_MemoryStack.GetBase(); }
-	const T* Base() const									{ return (T*)m_MemoryStack.GetBase(); }
+	const T* Base() const									{ return (const T*)m_MemoryStack.GetBase(); }
 
 	// element access
 	T& operator[]( int i )									{ Assert( IsIdxValid(i) ); return Base()[i];	}
